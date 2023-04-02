@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build and Push Docker Image') {
-        when {
+        if {
             branch 'dev'
         }
         steps {
@@ -17,7 +17,7 @@ node {
         }
     }
     stage('Deploy to Production') {
-        when {
+        if {
             branch 'main'
         }
         steps {
