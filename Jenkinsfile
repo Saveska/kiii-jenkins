@@ -13,11 +13,4 @@ node {
             }
         }
     }
-    stage('Deploy to Production') {
-        if(env.BRANCH_NAME == 'main'){
-           
-            // Deploy the application to production
-            // ...
-        }
-    }
 }
