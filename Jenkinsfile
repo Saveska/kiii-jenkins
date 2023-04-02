@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("saveska/kiii-jenkins/blob")
+       app = docker.build("saveska/kiii-jenkins/blob/main")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
